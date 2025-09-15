@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} samples{% endblock %}
+{% block content %}
+<div class="container my-5">
+  <div class="card bg-dark border-secondary">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <h5 class="mb-0">{{ title }}</h5>
+      <a href="{{ url_for('how_it_works') }}" class="btn btn-sm btn-outline-light">← Back to services</a>
+    </div>
+    <div class="card-body">
+      {% if samples %}
+        <div class="row g-3">
+          {% for url in samples %}
+            <div class="col-6 col-md-4 col-lg-3">
+              <a href="{{ url }}" target="_blank" rel="noopener">
+                <img src="{{ url }}" class="img-fluid rounded shadow-sm" alt="sample">
+              </a>
+            </div>
+          {% endfor %}
+        </div>
+      {% else %}
+        <div class="alert alert-secondary">No samples yet.</div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

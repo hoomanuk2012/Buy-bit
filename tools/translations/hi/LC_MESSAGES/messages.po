@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Language: hi\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Welcome"
+msgstr ""
+
+msgid "Your Total Earnings"
+msgstr ""
+
+msgid "Your Invite Link"
+msgstr ""
+
+msgid "Profit Log"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "Level"
+msgstr ""
+
+msgid "Amount (£)"
+msgstr ""
+
+msgid "Purchase History"
+msgstr ""
+
+msgid "Source"
+msgstr ""
+
+msgid "Date & Time"
+msgstr ""
+
+msgid "🔁 Buy Again"
+msgstr ""
+
+msgid "💳 Make Payment"
+msgstr ""
+
+msgid "🚪 Logout"
+msgstr ""

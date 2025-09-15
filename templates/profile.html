@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Profile - BUY BIT{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="glass-box p-4 bg-dark text-light p-3" style="max-width:720px; margin:0 auto;">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <h5 class="m-0">Profile</h5>
+      <a class="btn btn-sm btn-outline-light" href="{{ url_for('dashboard') }}">← Back to dashboard</a>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-dark table-sm align-middle" style="border-radius:16px">
+        <tbody>
+          <tr class="p-2"><th style="width:30%">Username</th><td>{{ username }}</td></tr>
+          <tr><th>Email</th><td>{{ email or '—' }}</td></tr>
+          <tr><th>PayPal email</th><td>{{ paypal_email or '—' }}</td></tr>
+          <tr><th>Referral code</th><td>{{ ref_code or '—' }}</td></tr>
+          <tr><th>Referral link</th><td class="small"><code>{{ ref_link }}</code></td></tr>
+          <tr><th>Balance</th><td>£{{ "%.2f"|format(balance or 0) }}</td></tr>
+          <tr><th>Admin</th><td>{{ 'Yes' if is_admin else 'No' }}</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

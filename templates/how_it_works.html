@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}How it works{% endblock %}
+{% block content %}
+<div class="container my-5">
+  <div class="card bg-dark border-secondary">
+    <div class="card-header d-flex justify-content-between align-items-center">
+      <h5 class="mb-0">Design services</h5>
+      <a href="{{ url_for('dashboard') }}" class="btn btn-sm btn-outline-light">← Back to dashboard</a>
+    </div>
+    <div class="card-body">
+      <p class="text-muted">Choose a service below. The <strong>Final price</strong> already includes the discount. Click <em>View samples</em> to see previous works for each category.</p>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+          <thead>
+            <tr>
+              <th>Service</th><th>Price</th><th>Discount</th><th>Final price</th><th>Samples</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for s in services %}
+            {% set final = (s.price * (1 - s.discount/100.0)) | round(2) %}
+            <tr>
+              <td>{{ s.title }}</td>
+              <td>£{{ '%.2f'|format(s.price) }}</td>
+              <td>{{ s.discount }}%</td>
+              <td><strong>£{{ '%.2f'|format(final) }}</strong></td>
+              <td>
+                <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('portfolio', slug=s.slug) }}">View samples</a>
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

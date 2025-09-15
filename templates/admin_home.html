@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Admin – BUY BIT{% endblock %}
+
+{% block content %}
+<div class="glass-box p-4 mb-3">
+  <h4 class="mb-3">Admin</h4>
+  <div class="d-flex flex-wrap gap-2">
+    <a class="btn btn-outline-gold" href="{{ url_for('admin_payouts') }}">Payouts</a>
+    <a class="btn btn-outline-gold" href="{{ url_for('admin_metrics') }}">Metrics</a>
+    <a class="btn btn-outline-gold" href="{{ url_for('admin_users') }}">Users</a>
+  </div>
+</div>
+{% endblock %}

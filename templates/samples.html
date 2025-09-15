@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} Samples – BUY BIT{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <a class="btn btn-sm btn-outline-light" href="{{ url_for('services') }}">← Back to services</a>
+    <span class="text-white-50 small">{{ slug }}</span>
+  </div>
+
+  <div class="glass-box p-4">
+    <h5 class="mb-3">{{ title }} – Samples</h5>
+    {% if images %}
+      <div class="row g-3">
+        {% for url in images %}
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="ratio ratio-4x3 rounded overflow-hidden">
+              <img src="{{ url }}" alt="sample" class="w-100 h-100" style="object-fit:cover;">
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p class="mb-0">No samples available.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

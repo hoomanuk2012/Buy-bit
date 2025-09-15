@@ -1,0 +1,209 @@
+/* ===========================
+   BUY BIT — Global Styles
+   =========================== */
+
+/* ---- Variables ---- */
+:root{
+  --bb-glass-bg: rgba(255,255,255,0.06);
+  --bb-glass-brd: rgba(255,255,255,0.18);
+  --bb-shadow  : 0 20px 40px rgba(0,0,0,0.25);
+
+  /* تیرگی لایه‌ی دیم روی بک‌گراند (0 روشن… 1 تیره) */
+  --bg-dim: .35;
+}
+
+/* ---- Base ---- */
+html, body { height: 100%; margin: 0; }
+html, body { background: #0b0f14 !important; } /* پایه‌ی تیره‌ی همیشگی */
+body{ color: #e9ecef; overflow-x: hidden; }
+
+/* ---- Global Background (image/video + dim) ----
+   تصویر پس‌زمینه را از طریق
+   style="--bg-image:url('...'); --bg-dim:.5"
+   روی <body class="has-bg"> ست کن.
+*/
+.has-bg{
+  position: relative;
+  min-height: 100%;
+  isolation: isolate;            /* جدا کردن لایه‌ها (مهم) */
+}
+
+/* ✦ حالت تصویر پس‌زمینه */
+.has-bg.bg-image::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(11, 15, 20, var(--bg-dim)),
+      rgba(11, 15, 20, var(--bg-dim))
+    ),
+    var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ✦ حالت ویدیو پس‌زمینه */
+.bb-bg-video-wrap{
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.bb-bg-video{
+  position: absolute;
+  top: 50%; left: 50%;
+  min-width: 100%; min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  opacity: calc(1 - var(--bg-dim, .35)); /* دیم با همان متغیر کنترل شود */
+  filter: saturate(1.05) contrast(1.05);
+}
+
+/* لایه‌ی پایه زیر تصویر/ویدیو برای جلوگیری از سفیدی */
+.has-bg::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:#0b0f14;
+  z-index:-1;
+}
+
+/* مطمئن شو محتوا بالای بک‌گراند است */
+.bb-header, .bb-main, .bb-footer{ position: relative; z-index: 1; }
+
+/* ---- Layout bits ---- */
+.bb-header{ padding: 20px 0 8px; }
+.bb-logo  { height: 64px; width: auto; display: block; margin-inline: auto; }
+
+.bb-main  { min-height: calc(100vh - 160px); padding: 16px; }
+.bb-footer{ color: rgba(255,255,255,.7); font-size:.875rem; padding: 12px 0 28px; text-align:center; }
+
+/* ---- Glass card ---- */
+.glass-box{
+  background: var(--bb-glass-bg);
+  border: 1px solid var(--bb-glass-brd);
+  border-radius: 16px;
+  box-shadow: var(--bb-shadow);
+}
+
+/* ---- Flash messages ---- */
+.flash-box{ background: var(--bb-glass-bg); border:1px solid var(--bb-glass-brd); border-radius:12px; box-shadow: var(--bb-shadow); }
+.flash-list{ margin:0; padding-left:1.1rem; }
+.flash-list li{ margin:.25rem 0; }
+.flash-success{ color:#7bd88f; }
+.flash-danger { color:#ff7b7b; }
+.flash-warning{ color:#f4d35e; }
+.flash-info   { color:#9ec1cf; }
+
+/* ===========================
+   Auth pages (login/register)
+   =========================== */
+.auth-wrap{
+  /* کارت را دقیقاً وسطِ صفحه بیاور */
+  min-height: calc(100vh - 220px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+}
+.auth-card{
+  width: 100%;
+  max-width: 520px;        /* هم‌عرض با رجیستر */
+  margin-inline: auto;
+}
+.auth-logo{
+  width: 100%;
+  max-width: 480px;        /* لوگوی داخل باکس — کمی بزرگ‌تر */
+  height: auto;
+  display:block;
+  margin: 0 auto 8px;
+}
+
+/* ---- Form controls ---- */
+.form-control{
+  background:#0f141a;
+  border-color: rgba(255,255,255,.18);
+  color:#e9ecef;
+}
+.form-control:focus{
+  background:#0f141a;
+  border-color:#f1c40f;
+  color:#fff;
+  box-shadow: 0 0 0 .2rem rgba(241,196,15,.15);
+}
+
+/* ---- Buttons ---- */
+.btn-gold{
+  background:#f1c40f;
+  color:#0b0f14;
+  border:1px solid #f1c40f;
+}
+.btn-gold:hover{
+  background:#ffcf24;
+  border-color:#ffcf24;
+  color:#0b0f14;
+}
+.btn-outline-gold{
+  --bs-btn-color:#f1c40f;
+  --bs-btn-border-color:#f1c40f;
+  --bs-btn-hover-bg:#f1c40f;
+  --bs-btn-hover-color:#0b0f14;
+  --bs-btn-hover-border-color:#f1c40f;
+}
+.bb-backtop{
+  position: sticky;
+  top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+  z-index: 5;
+}
+.btn-pp-gold {
+  background:#ffc439; color:#111; border:0; border-radius:999px;
+  padding:.65rem 1.25rem; font-weight:600;
+}
+.btn-pp-blue {
+  background:#0070ba; color:#fff; border:0; border-radius:999px;
+  padding:.65rem 1.25rem; font-weight:600;
+}
+.btn-pp-card {
+  background:#111; color:#fff; border:0; border-radius:999px;
+  padding:.65rem 1.25rem; font-weight:600;
+}
+.btn-pp-logo { font-weight:800; letter-spacing:.2px; }
+.btn-pp-logo .pal { color:#003087; }
+
+/* ===========================
+   Services table buttons
+   =========================== */
+.table tbody td a,
+table tbody td a{
+  display:inline-block;
+  padding:.25rem .5rem;
+  border:1px solid rgba(255,255,255,.35) !important;
+  border-radius:.375rem;
+  color:#e9ecef !important;
+  background:transparent !important;
+  text-decoration:none !important;
+  line-height:1.1rem;
+  font-size:.875rem;
+  transition:all .2s ease;
+}
+.table tbody td a:hover,
+table tbody td a:hover{
+  background:#f1c40f !important;
+  color:#0b0f14 !important;
+  border-color:#f1c40f !important;
+  text-decoration:none !important;
+}
+
+/* ===========================
+   Helpers (اختیاری)
+   =========================== */
+/* اگر خواستی لوگوی بالای صفحه فقط در صفحات احراز پنهان شود:
+   در همان صفحه لوگین با override بلاک header_logo این کار را کردیم */
+.hide-header-logo .bb-logo{ display:none !important; }

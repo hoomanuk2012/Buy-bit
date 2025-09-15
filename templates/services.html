@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Graphic Design Services – BUY BIT{% endblock %}
+
+{% block content %}
+<!-- <div class="d-flex mb-3">
+  <a class="btn btn-outline-light btn-sm" href="{{ url_for('dashboard') }}">← Back to dashboard</a>
+</div> -->
+
+<div class="glass-box p-3">
+  <!-- <h5 class="mb-3">Graphic Design Services</h5> -->
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h5 class="m-0">Graphic Design Services</h5>
+    <a class="btn btn-sm btn-outline-light" href="{{ url_for('dashboard') }}">← Back to dashboard</a>
+  </div>
+  {% for gname, items in groups.items() %}
+    <div class="mb-4">
+      <div class="fw-bold text-white-50 border-bottom pb-1 mb-2">{{ gname }}</div>
+      <div class="table-responsive">
+        <table class="table table-sm align-middle text-white-50">
+          <thead>
+            <tr>
+              <th style="width:40%">Service</th>
+              <th style="width:15%">Base</th>
+              <th style="width:15%">Discount</th>
+              <th style="width:15%">Now</th>
+              <th style="width:15%">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          {% for item in items %}
+            {% set base = item.base %}
+            {% set off = item.discount %}
+            {% set nowp = (base * (100 - off)) / 100.0 %}
+            <tr>
+              <td>{{ item.title }}</td>
+              <td>£{{ "%.2f"|format(base) }}</td>
+              <td><span class="badge bg-success">{{ off }}% OFF</span></td>
+              <td>£{{ "%.2f"|format(nowp) }}</td>
+              <td>
+                <a class="btn btn-outline-gold btn-sm" href="{{ url_for('service_samples', slug=item.slug) }}">View samples</a>
+              </td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

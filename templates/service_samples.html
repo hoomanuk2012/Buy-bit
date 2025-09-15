@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}{{ title }} – Samples{% endblock %}
+{% block content %}
+<div class="d-flex mb-3">
+  <a class="btn btn-outline-light btn-sm" href="{{ url_for('services') }}">← Back to services</a>
+</div>
+
+<div class="glass-box p-3">
+  <h5 class="mb-3">{{ title }}</h5>
+
+  {% if images %}
+  <div class="row g-3">
+    {% for img in images %}
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="{{ img }}" class="sample-thumb" data-idx="{{ loop.index0 }}">
+          <img class="w-100 rounded shadow-sm hover-zoom" src="{{ img }}" alt="sample {{ loop.index }}">
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+  {% else %}
+    <p class="mb-0 text-white-50">No samples yet.</p>
+  {% endif %}
+</div>
+
+<style>
+.hover-zoom{transition:transform .35s ease;}
+.hover-zoom:hover{transform:scale(1.06);}
+#lb-overlay{
+  position:fixed; inset:0; background:rgba(0,0,0,.9);
+  display:none; align-items:center; justify-content:center; z-index:1050;
+}
+#lb-overlay.show{display:flex;}
+#lb-overlay img{max-width:90%; max-height:90%; border-radius:.5rem; box-shadow:0 0 20px rgba(0,0,0,.6);}
+#lb-prev,#lb-next,#lb-close{
+  position:absolute; color:#fff; background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2); padding:.5rem .75rem; border-radius:.5rem;
+  cursor:pointer; user-select:none;
+}
+#lb-close{top:1rem; right:1rem;}
+#lb-prev{left:1rem;}
+#lb-next{right:1rem;}
+@media (max-width:768px){
+  #lb-prev,#lb-next{top:calc(50% - 1.25rem);}
+}
+</style>
+
+<div id="lb-overlay">
+  <button id="lb-close">✕</button>
+  <button id="lb-prev">‹</button>
+  <img id="lb-img" src="" alt="">
+  <button id="lb-next">›</button>
+</div>
+
+<script>
+(function(){
+  const thumbs = Array.from(document.querySelectorAll('.sample-thumb'));
+  if(!thumbs.length) return;
+
+  const overlay = document.getElementById('lb-overlay');
+  const imgEl   = document.getElementById('lb-img');
+  const prevBtn = document.getElementById('lb-prev');
+  const nextBtn = document.getElementById('lb-next');
+  const closeBtn= document.getElementById('lb-close');
+
+  const sources = thumbs.map(a => a.getAttribute('href'));
+  let idx = 0;
+
+  function show(i){
+    idx = (i + sources.length) % sources.length;
+    imgEl.src = sources[idx];
+    overlay.classList.add('show');
+  }
+  function hide(){ overlay.classList.remove('show'); imgEl.src=""; }
+
+  thumbs.forEach(a=>{
+    a.addEventListener('click', (e)=>{ e.preventDefault(); show(parseInt(a.dataset.idx,10)); });
+  });
+  prevBtn.onclick = ()=> show(idx-1);
+  nextBtn.onclick = ()=> show(idx+1);
+  closeBtn.onclick= hide;
+  overlay.addEventListener('click',(e)=>{ if(e.target===overlay) hide(); });
+  window.addEventListener('keydown',(e)=>{
+    if(!overlay.classList.contains('show')) return;
+    if(e.key==='Escape') hide();
+    if(e.key==='ArrowLeft') show(idx-1);
+    if(e.key==='ArrowRight') show(idx+1);
+  });
+})();
+</script>
+{% endblock %}

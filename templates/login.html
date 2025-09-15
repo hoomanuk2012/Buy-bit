@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+{% block title %}Login – BUY BIT{% endblock %}
+
+{% block header_logo %}{% endblock %}
+{% block flashes %}{% endblock %}
+
+{% block content %}
+<div class="auth-wrap d-flex justify-content-center">
+  <div class="auth-card glass-box p-4 w-100" style="max-width:420px">
+    <div class="text-center mb-3">
+      <a href="" aria-label="BUY BIT logo" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="BUY BIT" class="auth-logo">
+      </a>
+    </div>
+
+    <h5 class="text-center mb-3">Login to BUY BIT</h5>
+
+    <form method="post" action="{{ url_for('login') }}">
+      <input type="hidden" name="next" value="{{ request.args.get('next', '') }}">
+
+      <div class="mb-3">
+        <label class="form-label">Username or Email</label>
+        <input class="form-control" type="text" name="username" autocomplete="username" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input class="form-control" type="password" name="password" autocomplete="current-password" required>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center small mb-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="remember" name="remember" value="on">
+          <label class="form-check-label" for="remember">Remember me</label>
+        </div>
+        <a class="link-light" href="{{ url_for('forgot_password') }}">Forgot password?</a>
+      </div>
+
+      <button class="btn btn-warning w-100">Login</button>
+    </form>
+
+    {% with msgs = get_flashed_messages(with_categories=true) %}
+      {% if msgs %}
+        {% for cat, msg in msgs %}
+          {% if cat in ['danger','warning','info','success'] %}
+            <div class="mt-2 small {{ 'text-danger' if cat=='danger' else ('text-warning' if cat=='warning' else ('text-success' if cat=='success' else 'text-info')) }}">
+              • {{ msg }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <div class="text-center mt-3 small">
+      Don’t have an account?
+      <a class="link-light" href="{{ url_for('register') }}">Register here</a>
+    </div>
+  </div>
+</div>
+<!-- Instructions Modal -->
+<div class="modal fade" id="instructionsModal" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" style="z-index: 1; min-width: 930px">
+    <div class="modal-content glass-box p-4" style="background-color: #000;border-color: #ffc107">      
+      <!-- Header -->
+      <div class="modal-header" style="border: none">
+        <h1 class="modal-title" id="instructionsModalLabel" >How it Works!</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- Body -->
+      <div class="modal-body">        
+          <h6 class="modal-head text-white-50">Welcome to BUY BIT! Here's how the rewards game works:</h6>
+          <ul class="text-white-50" style="list-style-type: disc; padding-left: 20px;">
+            <li>Join the game with a one-time £50 payment.</li>
+            <li>Get a unique referral link after joining.</li>
+            <li>Invite 2 people to earn profit from their purchases.</li>
+            <li>Earn through 10 levels of referrals as the network grows.</li>
+            <li>You can rejoin anytime to continue earning more.</li>
+            <li>You leave the cycle after 10 levels, but your previous invites continue.</li>
+            <li>All purchases include a discount code for graphic design services.</li>
+          </ul>
+      </div>
+      <!-- Footer -->
+      <!-- <div class="modal-footer"> -->
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="z-index: 1">Close</button> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+<style>
+  #instructionsModalLabel{
+    color: #ffc107;
+  }
+  .modal-backdrop.show{
+    display: none;
+  }
+  .bb-footer{
+    z-index: 0;
+  }
+  li {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 2.5rem;
+    font-size: 25px;
+    list-style: disc;
+  }
+  .modal-head{
+    font-size: 28px;;
+  }
+</style>
+{% endblock %}

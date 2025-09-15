@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}BUY BIT{% endblock %}</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='vendor/bootstrap/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v=130) }}">
+  {% block head_extra %}{% endblock %}
+</head>
+
+<body class="has-bg {{ 'bg-video' if bg_video_url else 'bg-image' }}"
+      style="--bg-image:url('{{ bg_image_url }}'); --bg-dim: {{ bg_dim }};">
+
+  {% if bg_video_url %}
+  <div class="bb-bg-video-wrap">
+    <video class="bb-bg-video" autoplay muted loop playsinline preload="metadata"
+           poster="{{ bg_image_url }}">
+      <source src="{{ bg_video_url }}" type="video/mp4">
+    </video>
+  </div>
+  {% endif %}
+
+  <header class="bb-header">
+    <div class="container text-center">
+      {% block header_logo %}
+      <a href="{{ url_for('services') }}" class="d-inline-block">
+  <img src="{{ url_for('static', filename='logo.png') }}" alt="BUYBIT" class="brand-logo">
+</a>
+      {% endblock %}
+    </div>
+  </header>
+
+  <main class="bb-main">
+    <div class="container" style="max-width: 960px">
+
+      {# پیام‌های سراسری #}
+      {% block flashes %}
+      {% with msgs = get_flashed_messages(with_categories=true) %}
+        {% if msgs %}
+          <div class="global-flash mx-auto mb-3 flash-box p-3" style="max-width:720px;">
+            <ul class="flash-list">
+              {% for cat, msg in msgs %}
+                <li class="{% if cat=='success' %}flash-success{% elif cat=='danger' %}flash-danger
+                            {% elif cat=='warning' %}flash-warning{% else %}flash-info{% endif %}">
+                  {{ msg }}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endwith %}
+      {% endblock %}
+
+      {# فقط یک بار بلاک back_link تعریف می‌شود (مشکل قبلی از همین بود) #}
+      {% block back_link %}{% endblock %}
+
+
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+
+  <footer class="bb-footer">
+    © {{  now().year if false else 2025 }} BUY BIT • All rights reserved
+  </footer>
+
+  <script defer src="{{ url_for('static', filename='vendor/bootstrap/bootstrap.bundle.min.js') }}"></script>
+  {% block body_extra %}{% endblock %}
+</body>
+</html>

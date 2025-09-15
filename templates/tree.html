@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Referral Tree – BUY BIT{% endblock %}
+
+{% block content %}
+
+<!-- <div class="d-flex justify-content-end mb-2">
+  <a class="btn btn-sm btn-outline-light" href="{{ url_for('dashboard') }}">← Back to dashboard</a>
+</div> -->
+
+<div class="glass-box p-4 mb-2">
+  <!-- <h5 class="mb-2">Your referral tree</h5> -->
+  <div class="d-flex justify-content-between align-items-center mb-2">
+    <h5 class="m-0">Your referral tree</h5>
+    <a class="btn btn-sm btn-outline-light" href="{{ url_for('dashboard') }}">← Back to dashboard</a>
+  </div>
+  <div class="mb-2 text-white-50">Invite link:</div>
+  <div class="input-group mb-3">
+    <input class="form-control" value="{{ invite_link }}" readonly>
+    <button class="btn btn-outline-gold" onclick="navigator.clipboard.writeText('{{ invite_link }}')">Copy</button>
+  </div>
+</div>
+
+<div class="glass-box p-4 mb-2">
+  {% if referrals %}
+    <div class="table-responsive">
+      <table class="table table-sm align-middle text-white-50">
+        <thead><tr><th>Username</th><th>Level</th><th>Joined</th></tr></thead>
+        <tbody>
+          {% for r in referrals %}
+            <tr>
+              <td>{{ r.username }}</td>
+              <td>L{{ r.level }}</td>
+              <td>{{ r.joined_at }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="mb-0">No downlines yet.</p>
+  {% endif %}
+</div>
+{% endblock %}

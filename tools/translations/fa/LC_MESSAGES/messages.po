@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Language: fa\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "Dashboard"
+msgstr "داشبورد"
+
+msgid "Welcome"
+msgstr "خوش آمدید"
+
+msgid "Your Total Earnings"
+msgstr "کل درآمد شما"
+
+msgid "Your Invite Link"
+msgstr "لینک دعوت شما"
+
+msgid "Profit Log"
+msgstr "گزارش سودها"
+
+msgid "From"
+msgstr "از طرف"
+
+msgid "Level"
+msgstr "سطح"
+
+msgid "Amount (£)"
+msgstr "مبلغ (£)"
+
+msgid "Purchase History"
+msgstr "تاریخچه خرید"
+
+msgid "Source"
+msgstr "منبع"
+
+msgid "Date & Time"
+msgstr "تاریخ و زمان"
+
+msgid "🔁 Buy Again"
+msgstr "🔁 خرید دوباره"
+
+msgid "💳 Make Payment"
+msgstr "💳 پرداخت"
+
+msgid "🚪 Logout"
+msgstr "🚪 خروج"

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Admin / Purchases – BUY BIT{% endblock %}
+{% block content %}
+<div class="container">
+  <!-- <div class="mb-3 d-flex justify-content-between">
+    <a class="btn btn-sm btn-outline-light" href="{{ url_for('dashboard') }}">← Back to dashboard</a>
+    <div class="d-flex gap-2">
+      <a class="btn btn-sm btn-outline-light" href="{{ url_for('admin_home') }}">Admin home</a>
+      <a class="btn btn-sm btn-outline-gold" href="{{ url_for('admin_export_csv') }}">Export CSV</a>
+    </div>
+  </div> -->
+
+  <div class="glass-box p-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <div class="d-flex gap-2">
+        <a class="btn btn-sm btn-outline-light" href="{{ url_for('admin_home') }}">Admin home</a>
+        <a class="btn btn-sm btn-outline-light ml-1" href="{{ url_for('admin_export_csv') }}">Export CSV</a>
+      </div>
+      <a class="btn btn-sm btn-outline-light" href="{{ url_for('dashboard') }}">← Back to dashboard</a>            
+    </div>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h5 class="m-0">Admin / Purchases</h5>
+      <form method="get" class="d-flex gap-2">
+        <input class="form-control form-control-sm" name="q" value="{{ q or '' }}" placeholder="Search buyer or tx ref">
+        <button class="btn btn-sm btn-outline-gold">Search</button>
+      </form>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-sm align-middle text-white-50">
+        <thead><tr><th>ID</th><th>Buyer</th><th>Amount</th><th>Source</th><th>Tx</th><th>Created</th></tr></thead>
+        <tbody>
+          {% for r in purchases %}
+            <tr>
+              <td class="text-white">{{ r.id }}</td>
+              <td class="text-white">{{ r.buyer }}</td>
+              <td>£{{ "%.2f"|format(r.amount) }}</td>
+              <td>{{ r.source }}</td>
+              <td>{{ r.tx_ref or '—' }}</td>
+              <td>{{ r.created_at }}</td>
+            </tr>
+          {% else %}
+            <tr><td colspan="6">No purchases.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endblock %}

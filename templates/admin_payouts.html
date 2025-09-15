@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Admin – Payouts{% endblock %}
+
+{% block content %}
+
+<div class="d-flex justify-content-end mb-2">
+  <a class="btn btn-sm btn-outline-light" href="{{ url_for('dashboard') }}">← Back to dashboard</a>
+</div>
+
+<div class="glass-box p-4 mb-3">
+  <h4 class="mb-3">Pending payouts</h4>
+  {% if pending %}
+    <form class="mb-3" method="post" action="{{ url_for('admin_run_payout_batch') }}">
+      {% if csrf_token %}<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">{% endif %}
+      <button class="btn btn-gold" type="submit">Create PayPal batch</button>
+    </form>
+    <div class="table-responsive">
+      <table class="table table-sm align-middle text-white-50">
+        <thead><tr><th>ID</th><th>User</th><th>Amount</th><th>Status</th><th>Action</th></tr></thead>
+        <tbody>
+          {% for r in pending %}
+            <tr>
+              <td>{{ r.id }}</td>
+              <td>{{ r.username }}</td>
+              <td>£{{ '%.2f'|format(r.amount) }}</td>
+              <td>{{ r.status }}</td>
+              <td>
+                <form method="post" action="{{ url_for('admin_mark_paid', pid=r.id) }}" class="d-inline">
+                  {% if csrf_token %}<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">{% endif %}
+                  <input class="form-control form-control-sm d-inline-block" style="width:160px" name="ref" placeholder="ref (optional)">
+                  <button class="btn btn-outline-gold btn-sm">Mark paid</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="mb-0">No pending payouts.</p>
+  {% endif %}
+</div>
+
+<div class="glass-box p-4">
+  <h4 class="mb-3">Processing / Recent</h4>
+
+  <form class="mb-3" method="post" action="{{ url_for('admin_refresh_batch') }}">
+    {% if csrf_token %}<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">{% endif %}
+    <div class="input-group">
+      <input class="form-control" name="batch_id" placeholder="Enter batch id">
+      <button class="btn btn-outline-gold" type="submit">Refresh batch</button>
+    </div>
+  </form>
+
+  {% if recent %}
+    <div class="table-responsive">
+      <table class="table table-sm align-middle text-white-50">
+        <thead><tr><th>ID</th><th>User</th><th>Amount</th><th>Status</th><th>Batch</th><th>Created</th></tr></thead>
+        <tbody>
+          {% for r in recent %}
+            <tr>
+              <td>{{ r.id }}</td>
+              <td>{{ r.username }}</td>
+              <td>£{{ '%.2f'|format(r.amount) }}</td>
+              <td>{{ r.status }}</td>
+              <td>{{ r.pay_ref or '—' }}</td>
+              <td>{{ r.created_at }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p class="mb-0">None.</p>
+  {% endif %}
+</div>
+{% endblock %}

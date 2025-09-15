@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="max-width:720px">
+  <div class="auth-card mx-auto">  
+    <div class="d-grid gap-2 glass-box p-4">
+      <h2 class="text-center mb-2">Hello, {{ username }}!</h2>
+      <p class="text-center text-muted mb-3">Your balance: £{{ '%.2f'|format(bal) }}</p>
+      <a class="btn btn-gold w-100 mb-2" href="{{ url_pay }}">Pay £{{ '%.0f'|format(PRICE_GBP) }}</a>
+      <div class="row g-2">
+        <div class="col-6 mb-2">
+          <a class="btn btn-outline-light w-100" href="{{ url_services }}">Services</a>
+        </div>
+        <div class="col-6">
+          <a class="btn btn-outline-light w-100" href="{{ url_profile }}">Profile</a>
+        </div>
+      </div>
+
+      <div class="row g-2 mb-2">
+        <div class="col-6">
+          <a class="btn btn-outline-light w-100" href="{{ url_tree }}">Referral Tree</a>
+        </div>
+        <div class="col-6">
+          <a class="btn btn-outline-light w-100" href="{{ url_profit }}">Profit details</a>
+        </div>
+      </div>
+
+      {% if url_admin %}
+      <a class="btn btn-danger w-100 mb-2" href="{{ url_admin }}">Admin</a>
+      {% endif %}
+
+      <a class="btn btn-outline-secondary w-100 mb-2" href="{{ url_withdraw }}">Withdraw</a>
+      <a class="btn btn-secondary w-100" href="{{ url_for('logout') }}">Logout</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

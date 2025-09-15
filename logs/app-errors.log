@@ -1,0 +1,1898 @@
+2025-08-28 09:44:37,348 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 09:44:58,704 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 09:46:57,444 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 09:48:45,642 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 09:48:56,655 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 09:52:53,138 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 09:54:25,303 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 10:09:49,048 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 10:13:51,605 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 10:15:00,989 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    return render_template("dashboard.html", balance=bal, refs=refs, profits_count=profits_count)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 11:33:29,784 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    cur.execute("SELECT COUNT(*) FROM referrals WHERE parent_id=(SELECT id FROM users WHERE username=?)",(u,)); refs=cur.fetchone()[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 11:37:20,619 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    cur.execute("SELECT COUNT(*) FROM referrals WHERE parent_id=(SELECT id FROM users WHERE username=?)",(u,)); refs=cur.fetchone()[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 11:57:53,951 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    cur.execute("SELECT COUNT(*) FROM referrals WHERE parent_id=(SELECT id FROM users WHERE username=?)",(u,)); refs=cur.fetchone()[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 11:58:09,629 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    cur.execute("SELECT COUNT(*) FROM referrals WHERE parent_id=(SELECT id FROM users WHERE username=?)",(u,)); refs=cur.fetchone()[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 11:59:09,110 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    cur.execute("SELECT COUNT(*) FROM referrals WHERE parent_id=(SELECT id FROM users WHERE username=?)",(u,)); refs=cur.fetchone()[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 12:00:54,612 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    cur.execute("SELECT COUNT(*) FROM referrals WHERE parent_id=(SELECT id FROM users WHERE username=?)",(u,)); refs=cur.fetchone()[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 12:15:26,298 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    finally:
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 12:16:12,607 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    finally:
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 13:24:04,969 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 13:26:12,121 [ERROR] UNHANDLED EXCEPTION
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 482, in dashboard
+    # ---------- Core pages ----------
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 16:41:25,326 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 517, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 16:42:53,942 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 517, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 16, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-gold w-100">Pay £50 by Card / PayPal</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-28 16:59:00,888 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 517, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 20, in block 'content'
+    <a class="btn btn-outline-gold" href="{{ url_for('profile') }}">Profile</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'profile'. Did you mean 'profit_details' instead?
+2025-08-28 17:01:19,419 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 517, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 20, in block 'content'
+    <a class="btn btn-outline-gold" href="{{ url_for('profile') }}">Profile</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'profile'. Did you mean 'profit_details' instead?
+2025-08-28 17:10:16,936 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 517, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 21, in block 'content'
+    <a class="btn btn-outline-gold" href="{{ url_for('referral_tree') }}">Referral Tree</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'referral_tree'. Did you mean 'paypal_capture_order' instead?
+2025-08-28 17:10:40,296 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 517, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 21, in block 'content'
+    <a class="btn btn-outline-gold" href="{{ url_for('referral_tree') }}">Referral Tree</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'referral_tree'. Did you mean 'paypal_capture_order' instead?
+2025-08-28 17:22:40,364 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 517, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 22, in block 'content'
+    {% if is_admin() %}
+    ^^^^^^^^^^^^^^^^^
+TypeError: 'bool' object is not callable
+2025-08-28 18:38:43,770 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 524, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 18, in block 'content'
+    <a href="{{ url_for('pay_card_legacy') }}" class="btn btn-warning w-100">Pay £50 by Card</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay_card_legacy'. Did you mean 'paypal_create_order' instead?
+2025-08-28 18:48:35,976 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 524, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 18, in block 'content'
+    <a href="{{ url_for('pay_card_legacy') }}" class="btn btn-warning w-100">Pay £50 by Card</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay_card_legacy'. Did you mean 'paypal_create_order' instead?
+2025-08-28 18:56:07,781 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 524, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 27, in block 'content'
+    <a class="btn btn-outline-gold" href="{{ url_for('withdraw') }}">Withdraw</a>
+    ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1084, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 1073, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'withdraw'. Did you mean 'withdraw_form' instead?
+2025-08-29 07:38:21,676 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 340, in _wrap
+    return f(*args, **kwargs)
+  File "D:\buybit\app.py", line 780, in admin_metrics
+    return render_template("admin_metrics.html", users=users, purchases=purchases, admin_total=admin_total)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\admin_metrics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\admin_metrics.html", line 9, in block 'content'
+    <div class="h4 mb-0">£{{ '%.2f'|format(total_gross) }}</div>
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\filters.py", line 1043, in do_format
+    return soft_str(value) % (kwargs or args)
+           ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+jinja2.exceptions.UndefinedError: 'total_gross' is undefined
+2025-08-29 07:38:35,011 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 554, in profit_details
+    return render_template("profit_details.html", rows=rows)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\profit_details.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\profit_details.html", line 9, in block 'content'
+    <p class="mb-0">Total earned: <strong>£{{ '%.2f'|format(total) }}</strong> • Balance: <strong>£{{ '%.2f'|format(balance) }}</strong></p>
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\filters.py", line 1043, in do_format
+    return soft_str(value) % (kwargs or args)
+           ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+jinja2.exceptions.UndefinedError: 'total' is undefined
+2025-08-29 07:38:42,035 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 907, in profile
+    return render_template("profile.html")
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\profile.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\profile.html", line 9, in block 'content'
+    <form method="post" action="{{ url_for('profile_update') }}">
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'profile_update'. Did you mean 'profile' instead?
+2025-08-29 07:39:41,144 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 907, in profile
+    return render_template("profile.html")
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\profile.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\profile.html", line 9, in block 'content'
+    <form method="post" action="{{ url_for('profile_update') }}">
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'profile_update'. Did you mean 'profile' instead?
+2025-08-29 07:40:18,392 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 554, in profit_details
+    return render_template("profit_details.html", rows=rows)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\profit_details.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\profit_details.html", line 9, in block 'content'
+    <p class="mb-0">Total earned: <strong>£{{ '%.2f'|format(total) }}</strong> • Balance: <strong>£{{ '%.2f'|format(balance) }}</strong></p>
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\filters.py", line 1043, in do_format
+    return soft_str(value) % (kwargs or args)
+           ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+jinja2.exceptions.UndefinedError: 'total' is undefined
+2025-08-29 07:40:53,240 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 340, in _wrap
+    return f(*args, **kwargs)
+  File "D:\buybit\app.py", line 780, in admin_metrics
+    return render_template("admin_metrics.html", users=users, purchases=purchases, admin_total=admin_total)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\admin_metrics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 65, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\admin_metrics.html", line 9, in block 'content'
+    <div class="h4 mb-0">£{{ '%.2f'|format(total_gross) }}</div>
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\filters.py", line 1043, in do_format
+    return soft_str(value) % (kwargs or args)
+           ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+jinja2.exceptions.UndefinedError: 'total_gross' is undefined
+2025-08-29 09:29:49,446 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 533, in how_it_works
+    def how_it_works(): return render_template("how_it_works.html", services=SERVICES)
+                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\how_it_works.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 60, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\how_it_works.html", line 37, in block 'content'
+    <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('portfolio', slug=s.slug) }}">
+    ^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'portfolio' with values ['slug']. Did you mean 'portfolio_root' instead?
+2025-08-29 09:30:22,671 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 533, in how_it_works
+    def how_it_works(): return render_template("how_it_works.html", services=SERVICES)
+                               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\how_it_works.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 60, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\how_it_works.html", line 37, in block 'content'
+    <a class="btn btn-sm btn-outline-secondary" href="{{ url_for('portfolio', slug=s.slug) }}">
+    ^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'portfolio' with values ['slug']. Did you mean 'portfolio_root' instead?
+2025-08-29 10:07:38,096 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 657, in pay_paypal
+    return render_template(
+        "pay_paypal.html",
+    ...<2 lines>...
+        currency="GBP"
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\pay_paypal.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 69, in top-level template code
+    {% block body_extra %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\pay_paypal.html", line 34, in block 'body_extra'
+    <script src="https://www.paypal.com/sdk/js?components=buttons&currency=GBP&intent=CAPTURE&client-id={{ paypal_base() | safe }}"></script>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'paypal_base' is undefined
+2025-08-29 10:08:36,263 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 657, in pay_paypal
+    return render_template(
+        "pay_paypal.html",
+    ...<2 lines>...
+        currency="GBP"
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\pay_paypal.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 69, in top-level template code
+    {% block body_extra %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\pay_paypal.html", line 34, in block 'body_extra'
+    <script src="https://www.paypal.com/sdk/js?components=buttons&currency=GBP&intent=CAPTURE&client-id={{ paypal_base() | safe }}"></script>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'paypal_base' is undefined
+2025-08-29 10:08:41,003 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 657, in pay_paypal
+    return render_template(
+        "pay_paypal.html",
+    ...<2 lines>...
+        currency="GBP"
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\pay_paypal.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 69, in top-level template code
+    {% block body_extra %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\pay_paypal.html", line 34, in block 'body_extra'
+    <script src="https://www.paypal.com/sdk/js?components=buttons&currency=GBP&intent=CAPTURE&client-id={{ paypal_base() | safe }}"></script>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\utils.py", line 92, in from_obj
+    if hasattr(obj, "jinja_pass_arg"):
+       ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+jinja2.exceptions.UndefinedError: 'paypal_base' is undefined
+2025-08-29 10:55:23,126 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 545, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 60, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 18, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-warning w-100">Pay £50 by Card</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-29 10:56:13,314 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 545, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 60, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 18, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-warning w-100">Pay £50 by Card</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-29 10:56:16,737 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 545, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 60, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 18, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-warning w-100">Pay £50 by Card</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-29 10:57:14,120 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 545, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 152, in render_template
+    return _render(app, template, context)
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 133, in _render
+    rv = template.render(context)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "D:\buybit\templates\base.html", line 60, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\templates\dashboard.html", line 18, in block 'content'
+    <a href="{{ url_for('pay') }}" class="btn btn-warning w-100">Pay £50 by Card</a>
+    ^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1071, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 1060, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+        endpoint,
+    ...<3 lines>...
+        force_external=_external,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\werkzeug\routing\map.py", line 924, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'pay'. Did you mean 'pay_paypal' instead?
+2025-08-29 12:22:06,256 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 545, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 34, in template
+    {% endif %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endif'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2025-08-29 12:22:23,797 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 545, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 34, in template
+    {% endif %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endif'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2025-08-29 12:23:52,138 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 545, in dashboard
+    return render_template(
+        "dashboard.html",
+    ...<3 lines>...
+        recent_purchases=recent_purchases,
+    )
+  File "D:\buybit\.venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1087, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 771, in compile
+    self.handle_exception(source=source_hint)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\buybit\.venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\buybit\templates\dashboard.html", line 34, in template
+    {% endif %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endif'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2025-08-30 13:56:18,273 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 663, in pay_paypal
+    resp = make_response(render_template("pay_paypal.html",
+           ^^^^^^^^^^^^^
+NameError: name 'make_response' is not defined
+2025-08-30 13:57:00,102 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 663, in pay_paypal
+    resp = make_response(render_template("pay_paypal.html",
+           ^^^^^^^^^^^^^
+NameError: name 'make_response' is not defined
+2025-08-30 13:57:07,060 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 663, in pay_paypal
+    resp = make_response(render_template("pay_paypal.html",
+           ^^^^^^^^^^^^^
+NameError: name 'make_response' is not defined
+2025-08-30 14:13:46,488 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 675, in pay_paypal
+    resp.headers["Content-Security-Policy"] = CSP_FOR_PAY
+                                              ^^^^^^^^^^^
+NameError: name 'CSP_FOR_PAY' is not defined
+2025-08-30 14:14:25,589 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\buybit\.venv\Lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 675, in pay_paypal
+    resp.headers["Content-Security-Policy"] = CSP_FOR_PAY
+                                              ^^^^^^^^^^^
+NameError: name 'CSP_FOR_PAY' is not defined
+2025-08-30 15:12:21,965 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 674, in pay_paypal
+    resp.headers["Content-Security-Policy"] = CSP_FOR_PAY
+                                              ^^^^^^^^^^^
+NameError: name 'CSP_FOR_PAY' is not defined
+2025-08-30 15:13:19,333 [ERROR] UNHANDLED
+Traceback (most recent call last):
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\hooma\AppData\Local\Programs\Python\Python313\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "D:\buybit\app.py", line 674, in pay_paypal
+    resp.headers["Content-Security-Policy"] = CSP_FOR_PAY
+                                              ^^^^^^^^^^^
+NameError: name 'CSP_FOR_PAY' is not defined

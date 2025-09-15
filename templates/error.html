@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ code }} – BUY BIT{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+  <div class="auth-card glass-box p-4 text-center">
+    <h3 class="mb-2">Error {{ code }}</h3>
+    <p class="mb-3">{{ message }}</p>
+    <a class="btn btn-outline-gold" href="{{ url_for('login') }}">Back to Login</a>
+  </div>
+</div>
+{% endblock %}
