@@ -1,0 +1,39 @@
+# Virtual environments
+venv/
+ENV/
+env/
+.env
+.env.dev
+.env.live
+
+# Python bytecode
+*.pyc
+*.pyo
+*.pyd
+
+# __pycache__ folders
+__pycache__/
+*.so
+# Flask instance folder (config and sensitive info)
+instance/
+
+# Environment variables
+.env
+
+# Flask SQLite database (if any)
+*.db
+*.sqlite3
+
+# Migrations (if using Flask-Migrate)
+migrations/
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+*.log
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

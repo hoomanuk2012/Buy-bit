@@ -1,5 +1,5 @@
 # app.py  —  FULL VERSION
-
+from dotenv import load_dotenv
 import os, io, csv, base64, sqlite3
 from datetime import datetime, timedelta
 from collections import deque
@@ -76,6 +76,7 @@ def _ensure_tables():
     # users
     cur.execute("""
     CREATE TABLE IF NOT EXISTS users(
+        id INTEGER,
         username TEXT PRIMARY KEY,
         password TEXT NOT NULL,
         email TEXT,
@@ -144,6 +145,8 @@ def _ensure_tables():
         cur.execute("ALTER TABLE earnings ADD COLUMN percent REAL DEFAULT 0")
     if not _table_has_column(con, "earnings", "amount"):
         cur.execute("ALTER TABLE earnings ADD COLUMN amount REAL DEFAULT 0")
+    if not _table_has_column(con, "users", "id"):
+        cur.execute("ALTER TABLE users ADD COLUMN id INTEGER")
 
     con.commit()
 
@@ -1194,7 +1197,7 @@ def admin_users_profits():
     with get_db() as con:
         cur = con.cursor()
         users = cur.execute(
-            "SELECT id, username, parent_id, paypal_email, is_admin, created_at FROM users ORDER BY username"
+            "SELECT username, paypal_email, is_admin, created_at FROM users ORDER BY username"
         ).fetchall()
 
     # Calculate total and weekly profits
@@ -1330,20 +1333,3 @@ def approve_withdrawal():
     flash("Withdrawal request approved and balance updated.", "success")
     return redirect(url_for("admin_users_withdrawls"))
 
-@app.route('/get_users')
-def get_users():
-    conn = get_db()
-    cur = conn.cursor()
-    admin_username = "admin"
-    # cur.execute(
-    #         "UPDATE withdrawals SET status=? WHERE id=?",
-    #         ("pending", "2")
-    #     )
-    # cur.execute("DELETE FROM earnings WHERE id = ?", (19,))
-    # conn.commit()
-    cur.execute("SELECT * FROM withdrawals")
-    admin = cur.fetchall()
-    columns = [column[0] for column in cur.description]
-    admin_list = [dict(zip(columns, row)) for row in admin]
-
-    return jsonify(admin_list)
